@@ -1,0 +1,8 @@
+JS基础知识：ECMA-262标准
+JS-Web-API：W3C标准
+W3C标准中关于JS的规定有：
+DOM操作
+BOM操作
+事件绑定
+ajax请求（包括http协议）
+存储

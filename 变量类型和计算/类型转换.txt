@@ -1,0 +1,65 @@
+值类型类型转换计算
+
+1.字符串拼接
+var a = 100 + 10 //110
+var b = 100 + '10' //10010
+
+2.==运算符
+100 == '100' //true 100会转换成'100'
+0 == '' //true 0和''字符串都会转换为false
+null == undefined //true null和undefined都会转换为false这样它们就相等了
+
+3.if语句
+var a = true
+if(a){
+	//a是true会执行这里
+}
+
+var b = 100
+if(b){
+	//b会被强制转换为boolean类型为true会执行这里
+}
+
+var c = ''
+if(c){
+	//c会被强制转换为false不会执行这里
+}
+
+4.逻辑运算
+console.log(10 && 0) //0 10会被转换为true 所以继续执行 返回0
+console.log('' || 'abc') // 'abc' ''字符串转换为false 继续执行后面 返回 'abc'
+console.log(!window.abc) // true  window.abc是undefined 是false 经过!非 转换成true
+
+//判断一个变量会被当做 true 还是 false
+var a = 100
+console.log(!!a) //true
+
+//这个0会转换为false
+if(0){
+	console.log("123")
+}
+
+//这个NaN会转换为false
+if(NaN){
+	console.log("222")
+}
+
+//这个''会转换为false
+if(''){
+	console.log("333")
+}
+
+//这个null会转换为false
+if(null){
+	console.log("444")
+}
+
+//这个undefined会转换为false
+if(undefined){
+	console.log("555")
+}
+
+//这个false本身就是false
+if(false){
+	console.log("666")
+}

@@ -1,0 +1,5 @@
+DOM操作的常用API有哪些？
+
+获取DOM节点，以及节点的property和Attribute
+获取父节点，获取子节点
+新增节点，删除节点

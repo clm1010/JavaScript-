@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>什么是异步</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//异步是在执行过程中不会等待，例如下面例子
+		//执行顺序 100、300、1秒钟之后输出200
+		console.log(100);
+		setTimeout(function(){
+			console.log(200);
+		},1000);
+		console.log(300);
+	</script>
+</body>
+</html>

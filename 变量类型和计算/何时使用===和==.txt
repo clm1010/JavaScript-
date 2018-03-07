@@ -1,0 +1,7 @@
+//问题:何时使用===和==
+	if(obj.a == null){
+		//这里相当于obj.a===null ||obj.a === undefined,简写形式
+		//这是jquery源码中推荐的写法
+	}
+//在判断obj.a是null或者是undefined的时候用==号，其他的全部用===号做判断
+//Jquery源码中推荐这种写法，如果人家问就说Jquery源码中就这么写的，我在实际中也这么写的

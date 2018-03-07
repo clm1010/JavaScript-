@@ -1,0 +1,14 @@
+对象API
+for in
+
+var obj = {
+	x:100,
+	y:200,
+	z:300
+};
+
+var key
+
+for(key in obj){
+	
+}

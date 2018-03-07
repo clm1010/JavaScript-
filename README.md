@@ -55,7 +55,6 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
       *  事件冒泡
       *  通用绑定事件
       *  完善通用绑定事件
-      *  总结知识点
     * Ajax
       *  跨域
       *  Http状态码
@@ -76,3 +75,4 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
           *  DOM是哪种基本的数据结构？
     * 存储
     * JS-Web-API
+    * 总结知识点

@@ -1,0 +1,3 @@
+JS中内置对象
+Math
+JSON

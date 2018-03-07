@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>实际开发中闭包的应用</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //闭包实际应用中主要用于封装变量，收敛权限
+    function isFirstLoad(){
+    	var _list = [];
+    	return function (id){
+    		if (_list.indexOf(id)>=0) {
+    			return false;
+    		}else{
+    			_list.push(id);
+    			return true;
+    		}
+    	}
+    }
+
+    //使用
+    var firstLoad = isFirstLoad();
+    console.log(firstLoad(10));//true
+   	console.log(firstLoad(10));//false
+   	console.log(firstLoad(20));//true
+    </script>
+</body>
+
+</html>

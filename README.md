@@ -71,8 +71,8 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
       *  DOM节点操作演示
       *  DOM结构操作演示
       *  解题
-          * DOM操作的常用API有哪些？
-          * DOM节点Attribute和property有何区别？
-          * DOM是哪种基本的数据结构？
+        * DOM操作的常用API有哪些？
+        * DOM节点Attribute和property有何区别？
+        * DOM是哪种基本的数据结构？
     * 存储
     * JS-Web-API

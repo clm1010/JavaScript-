@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>写一个贴近实际开发原型链继承的例子</title>
+</head>
+
+<body>
+    <div id="detail_page">
+        <h1>112312312</h1>
+    </div>
+    <script type="text/javascript">
+    function Elem(id) {
+        this.elem = typeof id === "string" ? document.getElementById(id) : id;
+    }
+
+    Elem.prototype.html = function(val) {
+    	var elem = this.elem;
+        if (val) {
+            elem.innerHTML = val;
+            return this; //链式操作
+        } else {
+            return elem.innerHTML;
+        }
+    }
+
+    Elem.prototype.on = function(type,fn){
+    	var elem = this.elem;
+    	elem.addEventListener(type,fn);
+    	return this;
+    }
+
+    var div1 = new Elem("detail_page");
+    // console.log(div1.html());
+    // div1.html("<p>Hello World!</p>");
+    // div1.on('click',function(){
+    // 	alert("123");
+    // });
+    //链式操作
+    div1.html("<p>Hello World!</p>").on("click",function(){
+    	alert("123");
+    }).html("<p>JavaScript</p>")
+    </script>
+</body>
+
+</html>

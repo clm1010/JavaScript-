@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>闭包</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	//闭包的使用场景
+    	//1. 函数作为返回值
+    	//2. 函数作为参数传递
+
+	    function F1() {
+	        var a = 100;
+	        //返回一个函数（函数作为返回值）
+	        return function() {
+	            console.log(a); //a是自由变量，向他的父级作用域去找。一个函数的作用域是他在定义时候的作用域
+	        }
+	    }
+
+	    //f1得到一个函数
+	    var f1 = F1();
+	    var a = 200;
+	    f1(); //100
+    </script>
+</body>
+
+</html>

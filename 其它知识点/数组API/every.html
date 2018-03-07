@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>every</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	//判断所有元素是否都符合条件
+    	var arr = [1,2,3,4];
+    	var result = arr.every(function(item,index){
+    		if (item < 5) {
+    			return true;
+    		}
+    	});
+    	console.log(result);
+    </script>
+</body>
+
+</html>

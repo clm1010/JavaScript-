@@ -1,0 +1,4 @@
+DOM操作（Document Object Model）
+文档对象模型
+
+attribute 是（html代码）文档标签的属性；proprety 是基于JS的属性。

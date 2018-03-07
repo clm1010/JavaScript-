@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>作用域演示</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//1.没有块级作用域
+		if (true) {
+			var name = "zhangsan";
+		}
+		console.log(name);//zhangsan
+
+		//2.作用域
+		var a = 100;
+		function fnA(){
+			var b = 200;
+			console.log(a);//100
+			console.log(b);//200
+		}
+		fnA();
+
+		//3.作用域链
+		//那个作用域定义了这个函数，这个函数的作用域就是谁
+		var n1 = "n1";
+		function fn1(){
+			var n2 = "n2";
+			function fn2(){
+				var n3 = "n3";
+				console.log(n1);//n1 自由变量
+				console.log(n2);//n2 自由变量
+				console.log(n3);//n3
+			}
+			fn2();
+		}
+		fn1();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+// 如何理解JSON
+// JSON 是一个 JS 对象, JSON也是一种数据格式
+JSON.stringify({a:10,b:20}); //把对象变成字符串
+JSON.parse('{"a":10,"b":20}'); //把字符串变成对象

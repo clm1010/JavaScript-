@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>缓存示例</title>
+</head>
+<body>
+	<div>
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+	</div>
+	<script type="text/javascript">
+		//未缓存DOM查询
+		var i;
+		for (var i = 0; i < document.getElementsByTagName("p").length; i++) {
+			
+		}
+
+
+		// 缓存了DOM查询
+		var pList = document.getElementsByTagName("p");
+		var i;
+		for (var i = 0; i < pList.length; i++) {
+			console.log(pList[i].innerHTML)
+		}
+	</script>
+</body>
+</html>

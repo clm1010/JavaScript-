@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>执行上下文</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //	执行上下文
+    //	范围是一段<script>或一个函数
+
+    //（一段<script>）全局：创建全局上下文，执行前，会先把变量定义、函数声明拿出来。
+
+    //（函数）函数：创建函数上下文，执行前，会先把变量定义、函数声明、this、arguments 拿出来
+    
+
+   	fn();
+
+   	//函数声明
+   	function fn(){
+   		console.log("123");
+   	}
+
+   	// fn1();//报错
+
+   	//函数表达式
+   	var fn1 = function(){
+   		console.log("345");
+   	}
+
+   	fn2("zhangsan");
+   	function fn2(name){
+   		console.log(name);//zhangsan
+
+   		bar(200);
+   		function bar(num){
+   			console.log(num);//200
+   		}
+   	}
+    </script>
+</body>
+
+</html>

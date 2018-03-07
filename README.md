@@ -76,3 +76,6 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
     * 存储
     * JS-Web-API
     * 总结知识点
+  * 性能优化
+    * 缓存示例
+    * 优化策略

@@ -1,0 +1,25 @@
+cookie , sessionStorage和localStorage的区别？
+容量(cookie只有4KB,localStorage最大容量5M)
+是否会携带到ajax中(cookie每次请求都会带，sessionStorage和localStorage不会带)
+API易用性(cookie需要自己封装使用，sessionStorage和localStorage不用再封装，使用setItem和getItem存入获取值)
+
+cookie
+本身用于客户端和服务器端通信的
+但是它有本地存储的功能，于是就被“借用”
+使用document.cookie = ....获取和修改即可
+
+cookie用于存储的缺点
+存储量太小，只有4KB
+所有http请求都带着，会影响获取资源的效率
+API简单，需要封装才能用document.cookie=....
+
+localStorage和sessionStorage
+HTML5专门为存储而设计，最大容量5M
+API简单易用
+localStorage.setItem(key,value); 存储值
+localStorage.getItem(key); 获取值
+IOS safari隐藏模式下
+localStorage.getItem会报错
+建议统一使用try-catch封装
+
+localStorage和sessionStorage区别，当浏览器关闭sessionStorage就会清理，localStorage只要不手动清理它就一直在。

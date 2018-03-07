@@ -43,3 +43,10 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
       *  实际开发中闭包的应用
       *  this的几种不同使用场景
   * 异步和单线程
+    * 对比同步
+    * 什么是异步
+    * 异步和单线程概念总结
+    * 演示
+      *  什么是异步
+      *  一个关于setTimeout的笔试题
+  * JS-Web-API

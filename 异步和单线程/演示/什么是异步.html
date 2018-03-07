@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>什么是异步</title>
+</head>
+
+<body>
+    <button id="btn1" type="button">test</button>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.0.3/jquery.js"></script>
+    <script type="text/javascript">
+    //异步
+    // console.log(100);
+    // setTimeout(function(){
+    // 	console.log(200);
+    // },1000);
+    // console.log(300);
+
+    //同步
+    // console.log(100);
+    // alert(200);
+    // console.log(300);
+    // 
+    //图片加载(异步)
+   	// console.log("start");
+   	// var img = document.createElement("img");
+   	// img.onload = function(){
+   	// 	console.log("loaded");
+   	// }
+   	// img.src = "https://baike.baidu.com/pic/%E7%8B%AE%E5%AD%90/66440/0/060828381f30e9245f7487ae4a086e061c95f759?fr=lemma&ct=single#aid=0&pic=060828381f30e9245f7487ae4a086e061c95f759";
+   	// console.log("end");
+   	
+
+   	//事件(异步)
+   	console.log("start");
+   	var btn1 = document.getElementById("btn1");
+   	btn1.addEventListener("click",function(){
+   		console.log("clicked");
+   	});
+   	console.log("end");
+    </script>
+</body>
+
+</html>

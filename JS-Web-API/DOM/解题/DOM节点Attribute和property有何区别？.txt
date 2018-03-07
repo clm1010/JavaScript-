@@ -1,0 +1,5 @@
+DOM节点Attribute和property有何区别？
+
+property只是一个JS对象的属性的修改和获取
+
+Attribute是对html标签属性的修改和获取

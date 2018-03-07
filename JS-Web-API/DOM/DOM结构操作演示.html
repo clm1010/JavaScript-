@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM结构操作演示</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #EEE;
+    }
+
+    div {
+        margin: 10px;
+        padding: 10px;
+        background-color: #FFF;
+    }
+
+    p {
+        padding: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">this is p1</p>
+        <p id="p2">this is p2</p>
+    </div>
+    <div id="div2">
+        <p id="p3">this is p3</p>
+        <p id="p4">this is p4</p>
+    </div>
+    <script type="text/javascript">
+    	//创建节点插入
+    	// var p = document.createElement("p");
+    	// p.innerHTML = "new p";
+    	// var div1 = document.getElementById("div1");
+    	// div1.appendChild(p);
+    	
+    	//移动节点
+    	// var p4 = document.getElementById("p4");
+    	// var div1 = document.getElementById("div1");
+    	// div1.appendChild(p4);
+    	
+    	//获取父元素
+    	// var p4 = document.getElementById("p4");
+    	// var div1 = document.getElementById("div1");
+    	// console.log(p4.parentElement);
+    	// console.log(div1.parentElement);
+    	// console.log(div1.childNodes);
+    	// console.log(div1.childNodes[0].nodeType);// 3
+    	// console.log(div1.childNodes[1].nodeType);// 1
+    	// console.log(div1.childNodes[0].nodeName);//#text
+    	// console.log(div1.childNodes[1].nodeName);//p
+    	
+    	//删除元素
+    	var p4 = document.getElementById("p4");
+    	var div1 = document.getElementById("div1");
+    	var childNodes = div1.childNodes;
+    	// div1.removeChild(childNodes[0]);//这时候删除的是一个#text
+    	div1.removeChild(childNodes[1]);
+    </script>
+</body>
+
+</html>

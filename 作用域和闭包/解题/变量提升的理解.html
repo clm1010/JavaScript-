@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>变量的提升理解</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//执行上下文
+		//范围一段<script>或一个函数
+		//（一段<script>）全局:创建全局上下文，执行前，会先把变量定义、函数声明拿出来。
+		//函数：创建函数上下文，执行前，会把变量定义、函数声明、this、arguments 拿出来。
+		
+		//在script标签执行前，会把a变量初始化undefined
+		fn1();
+		//函数声明
+		function fn1(){
+			console.log(a);//undefined
+		}
+		
+		// 变量定义
+		var a = 100;
+
+		//函数
+		fn2("zhangsan");//函数执行前，fn2函数声明提升
+		function fn2(name){
+			console.log(name);//zhangsan
+
+			bar(200);//函数执行前，bar函数声明提升
+			function bar(num){
+				console.log(num);//200
+			}
+		}
+	</script>
+</body>
+
+</html>

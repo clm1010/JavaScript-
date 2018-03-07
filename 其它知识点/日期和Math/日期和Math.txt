@@ -1,0 +1,15 @@
+日期和Math
+日期
+console.log(Date.now());//获取当前时间毫秒数
+    var dt = new Date();
+    console.log(dt.getTime());//获取毫秒数
+    console.log(dt.getFullYear()); //年
+    console.log(dt.getMonth()); //月(0-11)
+    console.log(dt.getDate()); //日(0-31)
+    console.log(dt.getHours()); //小时(0-23)
+    console.log(dt.getMinutes()); //分钟(0-59)
+    console.log(dt.getSeconds()); //秒(0-59)
+
+Math
+获取随机数 Math.random() //返回大于0小于1的一个小数
+random()随机数主要用于前端清除缓存用的

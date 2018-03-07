@@ -1,0 +1,11 @@
+//JS中内置函数有哪些 —— 数据封装类对象
+
+Object
+Array
+Boolean
+Number
+String
+Function
+Date
+RegExp
+Error

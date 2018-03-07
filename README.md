@@ -50,3 +50,29 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
       *  什么是异步
       *  一个关于setTimeout的笔试题
   * JS-Web-API
+    * 事件
+      *  代理
+      *  事件冒泡
+      *  通用绑定事件
+      *  完善通用绑定事件
+      *  总结知识点
+    * Ajax
+      *  跨域
+      *  Http状态码
+      *  JSONP实现原理
+      *  readyState状态码
+      *  XMLHttpRequest
+    * BOM
+      *  BOM操作
+      *  BOM常用的和知识点
+    * DOM
+      *  DOM本质
+      *  DOM操作
+      *  DOM节点操作演示
+      *  DOM结构操作演示
+      *  解题
+          * DOM操作的常用API有哪些？
+          * DOM节点Attribute和property有何区别？
+          * DOM是哪种基本的数据结构？
+    * 存储
+    * JS-Web-API

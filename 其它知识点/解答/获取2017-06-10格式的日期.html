@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>获取2017-06-10格式的日期</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	function formatDate(dt){
+    		if (!dt) {
+    			dt = new Date();
+    		}
+
+    		var year = dt.getFullYear();
+    		var month = dt.getMonth()+1;
+    		var date = dt.getDate();
+
+    		if (month < 10) {
+    			// 强制类型转换
+    			month = "0"+month;
+    		}
+
+    		if (date < 10) {
+    			// 强制类型转换
+    			date = "0"+date;
+    		}
+
+    		return year + "-" + month + "-" + date;
+    	}
+
+    	var dt = new Date();
+    	var formatDate = formatDate(dt);
+    	console.log(formatDate);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>this的几种不同使用场景</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // this要在执行时确认值，定义时无法确认
+    //this的使用场景
+    //1. 作为构造函数执行
+    //2. 作为对象属性执行
+    //3. 作为普通函数执行
+    //4. call apply bind
+    
+
+    //1.作为构造函数执行
+    function Foo(name,age){
+    	this.name = name;
+    	this.age = age;
+    }
+
+    var f1 = new Foo("chulimin",32);
+    console.log(f1.name);//chulimin
+    console.log(f1.age);//32
+
+    //2.作为对象属性执行
+    var myObj = {
+    	name:"limin",
+    	age:30,
+    	print:function(){
+    		console.log(this.name,this.age);
+    	}
+    }
+
+    myObj.print();//limin 30
+
+    //3.作为普通函数执行
+    function ordinary(){
+    	console.log(this);//此时this指向window
+    }
+    ordinary();
+
+    //4. call apply bind
+    var myObj2 = {
+    	name:"CLM",
+    	age:32,
+    	myFn:function(){
+    		console.log(this.name,this.age);
+    	}
+    }
+    function fn1(name,age){
+    	console.log(name,age);
+    	console.log(this);
+    }
+
+    fn1.call({x:100},"min",30);
+    myObj2.myFn.call({name:"C",age:29});//C 29
+
+    fn1.apply({x:200},["lm",40]);
+
+ 	var fn2 = function(n,a){
+ 		console.log(n,a);
+ 		console.log(this);
+ 	}.bind({y:300});
+ 	fn2("lisi",12);//lisi 12
+    </script>
+</body>
+
+</html>

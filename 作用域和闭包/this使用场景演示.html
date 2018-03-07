@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>this使用场景演示</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //this的使用场景
+    //1. 作为构造函数执行
+    //2. 作为对象属性执行
+    //3. 作为普通函数执行
+    //4. call apply bind
+    
+    //1. 作为构造函数
+    function Foo(name){
+    	//this = {}
+    	this.name = name;
+    	//return this
+    }
+    var f = new Foo("zhangsan");
+    console.log(f);
+
+    // 2. 作为对象属性执行执行
+    var obj = {
+    	name:"A",
+    	printName:function(){
+    		console.log(this.name);
+    	}
+    }
+    obj.printName();//A
+
+    // 3. 作为普通函数执行
+    function fn(){
+    	console.log(this);//(this指向window)this === window
+    }
+    fn();
+
+    // 4. call apply bind
+    function fn1(name,age){
+    	alert(name);
+    	console.log(this);
+    }
+
+    //{x:100}就是this
+    fn1.call({x:100},"zhangsan",20);
+    // fn1.apply({x:100},["zhangsan",20]);
+    
+
+    //{y: 200}就是this
+    var fn2 = function(name,age){
+    	alert(name);
+    	console.log(this);
+    }.bind({y:200});
+
+    fn2("lisi",33);
+    </script>
+</body>
+
+</html>

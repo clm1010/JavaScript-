@@ -1,0 +1,15 @@
+//问题：JS中使用typeof能得到的哪些类型 
+一共六种
+console.log(typeof undefined);//undefined 
+console.log(typeof "");//string 
+console.log(typeof 123);//number 
+console.log(typeof true);//boolean 
+console.log(typeof {});//object 引用类型
+console.log(typeof []);//object 引用类型
+console.log(typeof null);//object 引用类型
+console.log(typeof console.log);//function 函数 引用类型
+console.log(typeof function(){});//function 函数 引用类型
+
+
+typeof 只能区分值类型的详细类型
+typeof 区分引用类型只能区分出fn函数

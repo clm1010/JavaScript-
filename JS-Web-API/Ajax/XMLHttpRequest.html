@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>XMLHttpRequest</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=top&count=1", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                console.log(xhr.responseText);
+            }
+        }
+    }
+    xhr.send(null);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>获取随机数,要求是长度一致的字符串格式</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	var random = Math.random();
+    	random = random + "0000000000";//后面加上10个零
+    	random = random.slice(0,10);
+    	console.log(random);
+    </script>
+</body>
+
+</html>

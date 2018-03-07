@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>对象API</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	var obj = {
+    		x:100,
+    		y:100,
+    		z:100
+    	}
+
+    	var key;
+    	for(key in obj){
+    		//判断key是obj中的属性，不是它原型中的属性
+    		if (obj.hasOwnProperty(key)) {
+    			console.log(key,obj[key]);
+    		}
+    	}
+    </script>
+</body>
+
+</html>

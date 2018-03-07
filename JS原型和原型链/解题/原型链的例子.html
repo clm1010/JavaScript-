@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>原型链的例子1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//动物
+		function Animal(){
+			this.eat = function(){
+				console.log("animal eat");
+			}
+		}
+
+		//狗
+		function Dog(){
+			this.bark = function(){
+				console.log("dog bark");
+			}
+		}
+
+		Dog.prototype = new Animal();
+		//哈士奇
+		var hashiqi = new Dog();
+		console.log(hashiqi.bark());
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOM常用的和知识点</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	//navigator (浏览器)
+    	//screen (屏幕)
+    	//location (地址)
+    	//history (历史)
+    	
+    	//navigator
+    	var ua = navigator.userAgent;
+    	console.log(ua);
+    	var isChrome = ua.indexOf("Chrome");
+    	console.log(isChrome);
+
+    	//screen
+    	console.log(screen.width);
+    	console.log(screen.height);
+
+    	//location 拆解url各部分
+    	console.log(location.href);//整个URL
+    	console.log(location.protocol);//协议 http:  https
+    	console.log(location.host);//域名
+    	console.log(location.pathname);//路径
+    	console.log(location.search);//参数
+    	console.log(location.hash);//#号和#号后面
+
+    	//history
+    	history.back();//后退
+    	history.forward();//前进
+    </script>
+</body>
+
+</html>

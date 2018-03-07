@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>作用域</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//JS没有块级作用域
+		//只有函数和全局作用域
+		
+
+
+
+		//无块级作用域
+		if(true){
+			var name = "zhangsan";
+		}
+		console.log(name);//zhangsan
+
+		//有函数和全局作用域
+		var a = 100;
+		function fn(){
+			var a = 200;
+			console.log('fn',a);
+		}
+		console.log('global',a);
+		fn();
+
+		//作用域链
+		//作用域链就是一直不断的向父级作用域去找
+		var b = 100;
+		function fn1(){
+			var c = 300;
+			//当前作用域没有定义变量，即“自由变量”
+			console.log(b);//向父级作用域找到b
+			console.log(c);
+		}
+
+		fn1();
+	</script>
+</body>
+
+</html>

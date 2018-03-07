@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>创建10个a标签点击的时候弹出来对应的序号</title>
+    <style type="text/css">
+    a {
+        display: block;
+        width: 30px;
+        height: 20px;
+        background-color: #888;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="myDiv"></div>
+    <script type="text/javascript">
+    var myDiv = document.querySelector(".myDiv");
+    var i;
+    for (i = 1; i <= 10; i++) {
+        //自执行函数，就是不用调用，只要定义完成，立即执行的函数
+        (function(i) {
+            var a = document.createElement("a");
+            br = document.createElement("br");
+            a.href = "javascript:void(0);";
+            a.innerHTML = i;
+
+
+            a.addEventListener("click", function(e) {
+                e.preventDefault();
+                alert(i);
+            });
+
+
+            myDiv.appendChild(a);
+            myDiv.appendChild(br);
+        })(i);
+    }
+    </script>
+</body>
+
+</html>

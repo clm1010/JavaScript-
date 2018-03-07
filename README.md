@@ -85,4 +85,22 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
       *  webpack-demo.html
       *  webpack.config.js
   * 其它知识点
-    
+    * 对象API
+      *  对象API.html
+      *  对象API.txt
+    * 日期和Math
+      *  日期
+      *  日期和Math
+      *  Math
+    * 数组API
+      *  数组API
+      *  every
+      *  filter
+      *  forEach
+      *  map
+      *  some
+      *  sort
+    * 解答
+      *  获取2017-06-10格式的日期
+      *  获取随机数,要求是长度一致的字符串格式
+      *  写一个能遍历对象和数组的通用forEach函数

@@ -1,9 +1,12 @@
 //问题：JS中使用typeof能得到的哪些类型 
-一共六种
-console.log(typeof undefined);//undefined 
-console.log(typeof "");//string 
-console.log(typeof 123);//number 
-console.log(typeof true);//boolean 
+// 值类型5种
+console.log(typeof undefined);    // undefined 值类型
+console.log(typeof "");           // string 值类型
+console.log(typeof 123);          // number 值类型
+console.log(typeof true);         // boolean 值类型
+console.log(typeof Symbol('s'));  // symbol 值类型
+
+// 引用类型
 console.log(typeof {});//object 引用类型
 console.log(typeof []);//object 引用类型
 console.log(typeof null);//object 引用类型

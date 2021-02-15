@@ -1,13 +1,14 @@
 值类型类型转换计算
 
 1.字符串拼接
-var a = 100 + 10 //110
-var b = 100 + '10' //10010
+const a = 100 + 10 // 110
+const b = 100 + '10' // '10010'
+const c = true + '10' // 'true10'
 
 2.==运算符
-100 == '100' //true 100会转换成'100'
-0 == '' //true 0和''字符串都会转换为false
-null == undefined //true null和undefined都会转换为false这样它们就相等了
+100 == '100' // true 100会转换成'100'
+0 == '' // true 0 和 '' 字符串都会转换为false
+null == undefined // true null和undefined都会转换为false这样它们就相等了
 
 3.if语句
 var a = true
@@ -63,3 +64,18 @@ if(undefined){
 if(false){
 	console.log("666")
 }
+
+truly 变量: !!a === true 的变量
+falsely 变量: !!a === false 的变量
+
+// 以下是 falsely 变量。除此之外都是 truly 变量
+!!0 === false
+!!NaN === false
+!!'' === false
+!!null === false
+!!undefined === false
+!!false === false
+
+console.log(10 && 0) // 0 因为在判断时10是true 会继续先后面判断 0 转换为false 判断结束 输出 0
+console.log('' || 'abc') // 'abc'
+console.log(!window.abc) // true

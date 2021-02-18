@@ -1,0 +1,4 @@
+每个class都有显示原型prototype
+每个实例都有隐式原型__proto__
+实例的__proto__指向对应class的prototype
+获取属性或执行方法时，先在自身属性和方法寻找，如果找不到则自动去__proto__ (隐式原型) 中查找

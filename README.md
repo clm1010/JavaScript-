@@ -33,6 +33,7 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
     - 写一个贴近实际开发原型链继承的例子
     - 原型链的例子.html
   - ES6 原型和原型链
+    - 手写简易 jQuery 考虑插件和扩展性
     - class 和继承
 - 作用域和闭包
   - 执行上下文

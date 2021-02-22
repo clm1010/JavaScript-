@@ -36,6 +36,7 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
     - 手写简易 jQuery 考虑插件和扩展性
     - class 和继承
 - 作用域和闭包
+  - 手写 bind 函数
   - 执行上下文
   - 作用域
   - 作用域演示
@@ -46,6 +47,7 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
   - 解题
     - 变量的提升理解
     - 创建 10 个 a 标签点击的时候弹出来对应的序号
+    - ES6 - 创建 10 个 a 标签点击的时候弹出来对应的序号
     - 如何理解作用域
     - 实际开发中闭包的应用
     - this 的几种不同使用场景

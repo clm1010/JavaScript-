@@ -35,7 +35,7 @@ loadImg(url1)
   })
   .then((img1) => {
     console.log(img1.height)
-    return loadImg(url2) // promise实例
+    return loadImg(url2) // promise 实例
   })
   .then((img2) => {
     console.log(img2.width)

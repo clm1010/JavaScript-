@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>DOM节点操作演示</title>
     <style type="text/css">
-    * {
+      * {
         margin: 0;
         padding: 0;
-    }
+      }
 
-    body {
-        background-color: #EEE;
-    }
+      body {
+        background-color: #eee;
+      }
 
-    div {
+      div {
         margin: 10px;
         padding: 10px;
-        background-color: #FFF;
-    }
+        background-color: #fff;
+      }
 
-    p {
+      p {
         padding: 5px;
-    }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="div1" class="class-div1">
-        <p id="p1" data-name="p1-data-name">this is p1</p>
-        <p id="p2">this is p2</p>
+      <p id="p1" data-name="p1-data-name">this is p1</p>
+      <p id="p2">this is p2</p>
     </div>
     <div id="div2" class="class-div2">
-        <p id="p3" data-name="p1-data-name">this is p3</p>
-        <p id="p4">this is p4</p>
+      <p id="p3" data-name="p1-data-name">this is p3</p>
+      <p id="p4">this is p4</p>
     </div>
     <script type="text/javascript">
-    //attribute 是（html代码）文档标签的属性；proprety 是基于JS的属性。
+      //attribute 是（html代码）文档标签的属性；proprety 是基于JS的属性。
 
-    //演示1  属性操作 (property)
-    var div1 = document.getElementById("div1"); //元素
-    // console.log(div1);
-    console.log(div1.className);
-    div1.className = "abc";
-    console.log(div1.className);
+      //演示1  属性操作 (property)
+      var div1 = document.getElementById('div1') //元素
+      // console.log(div1);
+      console.log(div1.className)
+      div1.className = 'abc'
+      console.log(div1.className)
 
-    var divList = document.getElementsByTagName("div"); //集合
-    console.log(divList);
-    console.log(divList.length);
-    console.log(divList[0]);
+      var divList = document.getElementsByTagName('div') //集合
+      console.log(divList)
+      console.log(divList.length)
+      console.log(divList[0])
 
-    var pList = document.querySelectorAll("p"); //集合
-    // console.log(pList);
+      var pList = document.querySelectorAll('p') //集合
+      // console.log(pList);
 
-    //演示2  属性操作 (Attribute)
-    var p1 = document.getElementById("p1");
-    console.log(p1.getAttribute("data-name"));
-    p1.setAttribute("data-name", "xyz");
-    console.log(p1.getAttribute("data-name"));
+      //演示2  属性操作 (Attribute)
+      var p1 = document.getElementById('p1')
+      console.log(p1.getAttribute('data-name'))
+      p1.setAttribute('data-name', 'xyz')
+      console.log(p1.getAttribute('data-name'))
     </script>
-</body>
-
+  </body>
 </html>

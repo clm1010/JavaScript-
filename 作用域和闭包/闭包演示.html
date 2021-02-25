@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>闭包演示</title>
-</head>
+  </head>
 
-<body>
-	<script type="text/javascript">
-		//闭包
-		//1.函数作为返回值
-		//2.函数作为参数传递
-		
-		//1.函数作为返回值
-		function F1(){
-			var a = 100;
-			return function (){
-				console.log(a);
-			}
-		}
+  <body>
+    <script type="text/javascript">
+      //闭包
+      //1.函数作为返回值
+      //2.函数作为参数传递
 
-		var f1 = F1();
-		var a = 200;
-		f1();//100
+      //1.函数作为返回值
+      function F1() {
+        var a = 100
+        return function () {
+          console.log(a)
+        }
+      }
 
-		//2.函数作为参数传递
-		function F2(){
-			var a = 200;
-			return function(){
-				console.log(a);//自由变量，向函数父级找
-			}
-		}
+      var f1 = F1()
+      var a = 200
+      f1() //100
 
-		var f2 = F2();
+      //2.函数作为参数传递
+      function F2() {
+        var a = 200
+        return function () {
+          console.log(a) //自由变量，向函数父级找
+        }
+      }
 
-		function F3(fn){
-			var a = 500;
-			fn();
-		}
-		F3(f2);//200
-	</script>
-</body>
+      var f2 = F2()
 
+      function F3(fn) {
+        var a = 500
+        fn()
+      }
+      F3(f2) //200
+    </script>
+  </body>
 </html>

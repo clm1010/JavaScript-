@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>一个关于setTimeout的笔试题</title>
-</head>
+  </head>
 
-<body>
-	<script type="text/javascript">
-		//执行setTimeout后，传入setTimeout的函数会被暂存起来，不会立即执行
-		//然后分别输出 1、3、5
-		//这时候待所有程序执行完，处于空闲状态时，会立马看有没有暂存起来的要执行。
-		//这时候在执行 2、4
-		console.log(1);
+  <body>
+    <script type="text/javascript">
+      //执行setTimeout后，传入setTimeout的函数会被暂存起来，不会立即执行
+      //然后分别输出 1、3、5
+      //这时候待所有程序执行完，处于空闲状态时，会立马看有没有暂存起来的要执行。
+      //这时候在执行 2、4
+      console.log(1)
 
-		setTimeout(function(){
-			console.log(2);
-		},0);
+      setTimeout(function () {
+        console.log(2)
+      }, 0)
 
-		console.log(3);
+      console.log(3)
 
-		setTimeout(function(){
-			console.log(4)
-		},1000);
+      setTimeout(function () {
+        console.log(4)
+      }, 1000)
 
-		console.log(5)
-	</script>
-</body>
-
+      console.log(5)
+    </script>
+  </body>
 </html>

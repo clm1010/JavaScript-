@@ -79,6 +79,7 @@ git clone https://github.com/clm1010/JavaScript-Knowledge-points-comb.git
     - DOM 操作
     - DOM 节点操作演示
     - DOM 结构操作演示
+    - DOM 增删改查
     - 解题
       - DOM 操作的常用 API 有哪些？
       - DOM 节点 Attribute 和 property 有何区别？

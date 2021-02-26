@@ -1,4 +1,5 @@
-let a, i
+const frag = document.createDocumentFragment()
+let a
 for (let i = 0; i < 10; i++) {
   a = document.createElement('a')
   a.innerHTML = i + '<br/>'
@@ -6,5 +7,6 @@ for (let i = 0; i < 10; i++) {
     e.preventDefault()
     alert(i)
   })
-  document.body.appendChild(a)
+  frag.appendChild(a)
 }
+document.body.appendChild(frag)

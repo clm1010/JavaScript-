@@ -9,16 +9,16 @@
   <body>
     <section id="SEC1"></section>
     <script type="text/javascript">
-      // 查询元素
+      // 通过元素id来查找元素
       const sec1 = document.getElementById('SEC1')
 
-      // 创建元素
+      // 创建一个元素
       const span = document.createElement('span')
       span.className = 'class-span'
       let spanText = document.createTextNode('this is span')
       span.appendChild(spanText)
 
-      // 添加元素
+      // 将span添加到sec1中
       sec1.appendChild(span)
 
       // 替换元素
@@ -46,8 +46,7 @@
 
       // 删除元素
       const pList = document.getElementsByClassName('class-p')
-      let ind = pList.length - 1
-      div2.removeChild(pList[ind])
+      div2.removeChild(pList[pList.length - 1])
     </script>
   </body>
 </html>

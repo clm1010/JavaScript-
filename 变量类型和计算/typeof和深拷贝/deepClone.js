@@ -27,9 +27,8 @@ console.log(obj2.arr[0])
  * @param {Object} obj 要拷贝的对象
  */
 function deepClone(obj = {}) {
-  // console.log(typeof obj)
+  // obj 是 null ，或者不是 object ，直接返回
   if (typeof obj !== 'object' || obj == null) {
-    // obj 是 null ，或者不是对象和数组，直接返回
     return obj
   }
 

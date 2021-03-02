@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>通用绑定事件</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <button id="btn1" type="button">点击</button>
     <a id="aLink" href="https://www.baidu.com">A链接</a>
     <script type="text/javascript">
-    var btn1 = document.getElementById("btn1");
-    btn1.addEventListener("click", function(event) {
-        console.log("clicked");
-    });
+      const btn1 = document.getElementById('btn1')
+      btn1.addEventListener('click', (event) => {
+        console.log('clicked')
+      })
 
-    function bindEvent(elem, type, fn) {
-        elem.addEventListener(type, fn);
-    }
+      // 通用事件绑定函数
+      function bindEvent(elem, type, fn, useCapture) {
+        console.log(useCapture)
+        elem.addEventListener(type, fn, useCapture)
+      }
 
-    var aLink = document.getElementById("aLink");
-    bindEvent(aLink, "click", function(e) {
-        e.preventDefault(); //阻止默认行为
-        alert(this.innerHTML);
-    });
+      const aLink = document.getElementById('aLink')
+      bindEvent(aLink, 'click', (e) => {
+        e.preventDefault() //阻止默认行为
+        alert(e.target.innerHTML)
+      },false) // false冒泡时触发
     </script>
-</body>
-
+  </body>
 </html>

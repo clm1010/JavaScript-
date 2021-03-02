@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>事件冒泡</title>
     <style type="text/css">
-    * {
+      * {
         margin: 0;
         padding: 0;
-    }
+      }
 
-    body {
-        background-color: #EEE;
-    }
+      body {
+        background-color: #eee;
+      }
 
-    div {
+      div {
         margin: 10px;
         padding: 10px;
-        background-color: #FFF;
-    }
+        background-color: #fff;
+      }
 
-    p {
+      p {
+        margin: 5px;
         padding: 5px;
-    }
+        border: 1px solid #ddd;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="div1">
-        <p id="p1">1激活</p>
-        <p id="p2">2取消</p>
-        <p id="p3">3取消</p>
-        <p id="p4">4取消</p>
+      <p id="p1">1激活</p>
+      <p id="p2">2取消</p>
+      <p id="p3">3取消</p>
+      <p id="p4">4取消</p>
     </div>
     <div id="div2">
-        <p id="p5">5取消</p>
-        <p id="p6">6取消</p>
+      <p id="p5">5取消</p>
+      <p id="p6">6取消</p>
     </div>
     <script type="text/javascript">
-    function bindEvent(elem, type, fn) {
-        elem.addEventListener(type, fn);
-    }
+      function bindEvent(elem, type, fn, useCapture) {
+        elem.addEventListener(type, fn, useCapture)
+      }
 
-    var p1 = document.getElementById("p1");
-    var body = document.body;
+      const p1 = document.getElementById('p1')
+      const body = document.body
 
-    bindEvent(p1, "click", function(e) {
-        e.stopPropagation();
-        alert(this.innerHTML);
-    });
+      bindEvent(p1, 'click', (e) => {
+        e.stopPropagation() // 阻止冒泡 可以注释，试一下效果
+        console.log('this is p1')
+        alert(e.target.innerHTML)
+      },false) // false冒泡时触发 true捕获时触发
 
-    bindEvent(body, "click", function(e) {
-        alert(e.target.innerHTML);
-    });
+      bindEvent(body, 'click', (e) => {
+        console.log('this is body')
+        alert(e.target.innerHTML)
+      },false)
     </script>
-</body>
-
+  </body>
 </html>
